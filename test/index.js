@@ -12,7 +12,7 @@
 
  var fs = require('fs')
    , path = require('path')
-   , tsvto = require('../');
+   , tsvert = require('../');
 
 
 /**
@@ -21,34 +21,115 @@
 function runTests() {
   //console.log("runTests start");
   var dir = __dirname + '/tests/';
-  var file = dir + 'test-2.tsv';
-  var tsv = fs.readFileSync(file, 'utf8');
-  //console.log(tsv1);
-  var result = tsvto(tsv, 'sql');
-  var lines = result.replace(/\r/g, "").split("\n");
-  for(var i = 0; i < lines.length; i++){
-    console.log(lines[i]);
-    if (lines[i] != 'dINSERT INTO table(header1, header2:int, ) VALUES('1', '3', )') {
 
-    } else {
-        
-    }
+  /*
+  for (var i = 1; i <= 1; i++) {
+    var file = dir + i + '.tsv';
+    var tsv = fs.readFileSync(file, 'utf8');
+    runSqlTest(tsv);
+  }
+  */
+
+
+  var tsvFile = dir + '1.tsv';
+  var tsv = fs.readFileSync(tsvFile, 'utf8');
+
+
+  var dataType = 'sql';
+
+  var result = tsvert(tsv, dataType);
+  var textFile = dir + '1-' + dataType + '.text';
+  var text = fs.readFileSync(textFile, 'utf8');
+
+  if (result == text) {
+    console.log('#1. data type '+ dataType + ' completed.');
+  } else {
+    console.log('#1. data type '+ dataType + ' fail.');
+    console.log('\nGot:\n%s\n', result);
+    console.log('\nExpected:\n%s\n', text);
   }
 
 
+  var dataType = 'php';
+
+  var result = tsvert(tsv, dataType);
+  var textFile = dir + '1-' + dataType + '.text';
+  var text = fs.readFileSync(textFile, 'utf8');
+
+  if (result == text) {
+    console.log('#2. data type '+ dataType + ' completed.');
+  } else {
+    console.log('#2. data type '+ dataType + ' fail.');
+    console.log('\nGot:\n%s\n', result);
+    console.log('\nExpected:\n%s\n', text);
+  }
 
 
-
-
-
-
-  //console.log(result + "------------");
-
-  //var result = tsvto(tsv, 'php');
   //console.log(result);
+  //console.log(text);
 
-  //console.log("runTests end");
+
+  //console.log("text start");
+  //console.log("text end");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //runSqlTest(tsv);
+
+
+
+
+
+
+
+
 }
+
+
+function runSqlTest(tsv) {
+  var result = tsvert(tsv, 'sql');
+
+
+  console.log(result)
+  //console.log("hoge")
+
+
+
+  var lines = result.replace(/\r/g, "").split("\n");
+
+  // header minus
+  var length = lines.length - 1;
+
+  for(var i = 0; i < length; i++){
+    //console.log(i);
+    if (lines[i] != "INSERT INTO table(header1, header2:int, ) VALUES('1', '3', );") {
+      console.log('\nGot:\n%s\n', lines[i]);
+      console.log('\nExpected:\n%s\n', "INSERT INTO table(header1, header2:int, ) VALUES('1', '3', );");
+    } else {
+
+    }
+  }
+}
+
+
+
+
+
+
 
 /**
 * Main
@@ -61,7 +142,7 @@ function main() {
 * Execute
 */
 if (!module.parent) {
-  process.title = 'tsvto';
+  process.title = 'tsvert';
   process.exit(main(process.argv.slice()) ? 0 : 1);
 } else {
   exports = main;

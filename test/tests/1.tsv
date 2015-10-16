@@ -1,0 +1,13 @@
+header1	header2:num	header3:const	header4:str	header5:flex	header6\:str
+0	0	0	0	0	0
+8882	8882	8882	8882	8882	8882
+-8882	-8882	-8882	-8882	-8882	-8882
+3.14159	3.14159	3.14159	3.14159	3.14159	3.14159
+Michael Jordan	Michael Jordan	Michael Jordan	Michael Jordan	Michael Jordan	Michael Jordan
+Lionel Messi	Lionel Messi	Lionel Messi	Lionel Messi	Lionel Messi	Lionel Messi
+日本語	日本語	日本語	日本語	日本語	日本語
+					not empty
+TRUE	TRUE	TRUE	TRUE	TRUE	TRUE
+FALSE	FALSE	FALSE	FALSE	FALSE	FALSE
+NULL	NULL	NULL	NULL	NULL	NULL
+CONSTANT	CONSTANT	CONSTANT	CONSTANT	CONSTANT	CONSTANT
