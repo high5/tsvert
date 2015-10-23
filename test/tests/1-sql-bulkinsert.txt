@@ -1,0 +1,12 @@
+INSERT INTO table(header1, header2, header3, header4, header5, header6:str) VALUES(0, 0, 0, '0', 0, 0)
+,(header1, header2, header3, header4, header5, header6:str) VALUES(8882, 8882, 8882, '8882', 8882, 8882)
+,(header1, header2, header3, header4, header5, header6:str) VALUES(-8882, -8882, -8882, '-8882', -8882, -8882)
+,(header1, header2, header3, header4, header5, header6:str) VALUES(3.14159, 3.14159, 3.14159, '3.14159', 3.14159, 3.14159)
+,(header1, header2, header3, header4, header5, header6:str) VALUES('Michael Jordan', 0, Michael Jordan, 'Michael Jordan', 'Michael Jordan', 'Michael Jordan')
+,(header1, header2, header3, header4, header5, header6:str) VALUES('Lionel Messi', 0, Lionel Messi, 'Lionel Messi', 'Lionel Messi', 'Lionel Messi')
+,(header1, header2, header3, header4, header5, header6:str) VALUES('日本語', 0, 日本語, '日本語', '日本語', '日本語')
+,(header1, header2, header3, header4, header5, header6:str) VALUES('', 0, UNDEFINED, '', '', 'not empty')
+,(header1, header2, header3, header4, header5, header6:str) VALUES('TRUE', 0, TRUE, 'TRUE', TRUE, 'TRUE')
+,(header1, header2, header3, header4, header5, header6:str) VALUES('FALSE', 0, FALSE, 'FALSE', FALSE, 'FALSE')
+,(header1, header2, header3, header4, header5, header6:str) VALUES('NULL', 0, NULL, 'NULL', NULL, 'NULL')
+,(header1, header2, header3, header4, header5, header6:str) VALUES('CONSTANT', 0, CONSTANT, 'CONSTANT', 'CONSTANT', 'CONSTANT');
