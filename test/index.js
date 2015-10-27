@@ -21,6 +21,9 @@
 function runTests() {
   var dir = __dirname + '/tests/';
 
+
+
+
   var testCase = [
     {
       "dataType":"sql",
@@ -52,7 +55,36 @@ function runTests() {
       "resultTextFile":"1-sql.txt",
       "option":{"header":"header1\theader2:num\theader3:const\theader4:str\theader5:flex\theader6\\:str"}
     },
-
+    {
+      "dataType":"json",
+      "tsv":"1.tsv",
+      "resultTextFile":"1-json.txt",
+      "option":null
+    },
+    {
+      "dataType":"json",
+      "tsv":"1.tsv",
+      "resultTextFile":"1-json-indent.txt",
+      "option":{"indent":true}
+    },
+    {
+      "dataType":"json",
+      "tsv":"1.tsv",
+      "resultTextFile":"1-json-keynumber.txt",
+      "option":{"useRowNumberKey":true}
+    },
+    {
+      "dataType":"json",
+      "tsv":"1.tsv",
+      "resultTextFile":"1-json.txt",
+      "option":{"html":true}
+    },
+    {
+      "dataType":"json",
+      "tsv":"1.tsv",
+      "resultTextFile":"1-json.txt",
+      "option":{"header":"header1\theader2:num\theader3:const\theader4:str\theader5:flex\theader6\\:str"}
+    },
     {
       "dataType":"php",
       "tsv":"1.tsv",
@@ -64,9 +96,25 @@ function runTests() {
       "tsv":"1.tsv",
       "resultTextFile":"1-php-indent.txt",
       "option":{"indent":true}
+    },
+    {
+      "dataType":"php",
+      "tsv":"1.tsv",
+      "resultTextFile":"1-php-keynumber.txt",
+      "option":{"useRowNumberKey":true}
+    },
+    {
+      "dataType":"php",
+      "tsv":"1.tsv",
+      "resultTextFile":"1-php.txt",
+      "option":{"html":true}
+    },
+    {
+      "dataType":"php",
+      "tsv":"1.tsv",
+      "resultTextFile":"1-php.txt",
+      "option":{"header":"header1\theader2:num\theader3:const\theader4:str\theader5:flex\theader6\\:str"}
     }
-
-
   ];
 
   for (var i = 0; i < testCase.length; i++) {

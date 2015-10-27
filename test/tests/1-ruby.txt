@@ -11,4 +11,4 @@
   {"header1":"FALSE", "header2":0, "header3":FALSE, "header4":"FALSE", "header5":FALSE, "header6:str":"FALSE"},
   {"header1":"NULL", "header2":0, "header3":NULL, "header4":"NULL", "header5":NULL, "header6:str":"NULL"},
   {"header1":"CONSTANT", "header2":0, "header3":CONSTANT, "header4":"CONSTANT", "header5":"CONSTANT", "header6:str":"CONSTANT"}
-];
+]
