@@ -1,5 +1,0 @@
-header1	header2:int	header3:bool	header4:const	header5:reserved	header6:string
-1	3	TRUE	CONST	null	3
-2	4	FALSE	CONST	FALSE	4
-ryu	ryu	ryu	ryu	アメリカ	ryu
-ken	ken	ken	ken	日本	ken
