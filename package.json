@@ -1,0 +1,20 @@
+{
+  "name": "tsvert",
+  "description": "Converts TSV data into various data formats, include SQL(INSERT) and JSON and several programming languages data formats(PHP, Ruby Python).",
+  "author": "High5",
+  "version": "0.0.1",
+  "main": "./lib/marked.js",
+  "repository": "git://github.com/high5/tsvert.git",
+  "keywords": ["TSV", "SQL", "JSON", "PHP", "Ruby", "Python"],
+  "homepage": "https://github.com/high5/tsvert",
+  "bugs": {"url": "http://github.com/high5/tsvert/issues" },
+  "license": "MIT",
+  "keywords": ["markdown", "markup", "html"],
+  "tags": ["markdown", "markup", "html"],
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-uglify": "^1.1.0",
+    "gulp-concat": "^2.5.2"
+  },
+  "scripts": {"test": "node test"}
+}
