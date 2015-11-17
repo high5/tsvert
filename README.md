@@ -214,13 +214,21 @@ Following is a result of header option:
 Depending on the type of data format to be converted, different options that you can use.
 The following is option correspondence table.
 
-||html|indent|header|useRowNumberKey|sqlBulkInsert|sqlTableName|rubySymbolKey|header|
-|:-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|JSON|〇|〇|〇|〇|×|×|×|×|
-|SQL|〇|〇|〇|×|〇|〇|×|×|
-|PHP|〇|〇|〇|〇|×|×|×|×|
-|Python|〇|〇|〇|〇|×|×|×|×|
-|Ruby|〇|〇|〇|〇|×|×|〇|×|
+
+| Left-Aligned  | Center Aligned  | Right Aligned |
+| :------------ |:---------------:| -----:|
+| col 3 is      | some wordy text | $1600 |
+| col 2 is      | centered        |   $12 |
+| zebra stripes | are neat        |    $1 |
+
+
+|       | html |indent|header|useRowNumberKey|sqlBulkInsert|sqlTableName|rubySymbolKey|header|
+| :---  | :--: |:---: |  :-: | :------------:|:-----------:|:----------:|:-----------:|:----:|
+| JSON  |  〇  |  〇  |  〇  |      〇        | ×           |×           |×            |×     |
+| SQL   |  〇  |  〇  |  〇  |×               |〇           | 〇         |×            |×     |
+| PHP   |  〇  |  〇  |  〇  |〇              |×            |×           |×            |×     |
+| Python|  〇  |  〇  |  〇  |〇              |×            |×           |×            |×     |
+| Ruby  |  〇  |  〇  |  〇  |〇              |×            |×           |〇           | ×    |
 
 
 ## :type
@@ -272,7 +280,7 @@ Others are the same as normal.
 The value of the object is together even in uppercase or lowercase.
 
 
-### header行でのコロン（:）のエスケープ
+### escape of a colon (:) in the header row
 Colon as a string in the header line: If you want to use, you will need to escape the "\".
 
 In the example below we have "\" escape the colon of the price (:).
