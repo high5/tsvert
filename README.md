@@ -297,7 +297,6 @@ Of each in the following table: by the specified type, you can Yes whether data 
 ※ leftmost column becomes the original data, the data is set in the header row, respectively: how data according to type will have been able to verify and converted.
 ※ The default header line: If you do not specify the type
 
-
 ||default|:str|:num|:const|:flex|
 |:-|:-:|:-:|:-:|:-:|:-:|
 |0→|0|"0"|0|0|0|
