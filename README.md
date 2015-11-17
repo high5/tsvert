@@ -214,14 +214,6 @@ Following is a result of header option:
 Depending on the type of data format to be converted, different options that you can use.
 The following is option correspondence table.
 
-
-| Left-Aligned  | Center Aligned  | Right Aligned |
-| :------------ |:---------------:| -----:|
-| col 3 is      | some wordy text | $1600 |
-| col 2 is      | centered        |   $12 |
-| zebra stripes | are neat        |    $1 |
-
-
 |       | html |indent|header|useRowNumberKey|sqlBulkInsert|sqlTableName|rubySymbolKey|header|
 | :---  | :--: |:---: |  :-: | :------------:|:-----------:|:----------:|:-----------:|:----:|
 | JSON  |  〇  |  〇  |  〇  |      〇        | ×           |×           |×            |×     |
@@ -305,10 +297,10 @@ Of each in the following table: by the specified type, you can Yes whether data 
 ※ leftmost column becomes the original data, the data is set in the header row, respectively: how data according to type will have been able to verify and converted.
 ※ The default header line: If you do not specify the type
 
-||default|:str|:num|:const|:flex|
-|:-|:-:|:-:|:-:|:-:|:-:|
-|0→|0|"0"|0|0|0|
-|8882→|8882|"8882"|8882|8882|8882|
+|     |default| :str | :num | :const | :flex |
+|:--- | :---: | :--: | :--: | :----: | :---: |
+|0→   |0      |"0"   |0     |0       |0      |
+|8882→|8882   |"8882"|8882  |8882    |8882   |
 |-8882→|-8882|"-8882"|8882|8882|8882|
 |Lionel Messi→|"Lionel Messi"|"Lionel Messi"|0|Lionel Messi|"Lionel Messi"|
 |→|""|""|0|UNDEFINED|""|
