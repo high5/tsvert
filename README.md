@@ -4,6 +4,8 @@ Tsvert is supposed to work in both Node.js and browser environments.
 
 ![NPM version](https://badge.fury.io/js/tsvert.png)
 
+[![NPM version](https://badge.fury.io/js/tsvert.png)][badge] 
+
 ## Installation
 ```
 npm install tsvert --save
