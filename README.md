@@ -67,7 +67,7 @@ result:
 
 
 ## Options
-You can specify a number of options in tsvert.
+You can specify a number of options in tsvert.  
 Example setting options with default values:
 ```JavaScript
 tsvert.defaults = {
@@ -84,8 +84,8 @@ tsvert.defaults = {
 The explanation for each of the options.
 
 ### html
-This option uses the "<br>" tag without using the "\ n" to the new line code for output of browser.
-By default it is false.
+This option uses the `<br>` tag without using the `\ n` to the new line code for output of browser.    
+By default it is false.     
 Following is a result of html option(setting true):
 ```JavaScript
 [<br>
@@ -95,8 +95,8 @@ Following is a result of html option(setting true):
 ```
 
 ### indent
-This option outputs the indent the data of the target to the deeper layers.
-By default it is false.
+This option outputs the indent the data of the target to the deeper layers.      
+By default it is false.      
 Following is a result of indent option(setting false):
 ```JavaScript
 [
@@ -123,25 +123,23 @@ Following is a result of indent option(setting true):
 ```
 
 ### sqlBulkInsert
-sqlBulkInsert option is an option to output together with the sql insert statement to bulk insert format to one of the sql statement.
+sqlBulkInsert option is an option to output together with the sql insert statement to bulk insert format to one of the sql statement.    
 It can be used only in SQL.
-By default it is false.
-
+By default it is false.  
 Following is a result of sqlBulkInsert option(setting false):
 ```sql
 INSERT INTO table(id, name, type, price) VALUES(1001, 'egg', 'food', 200);
 INSERT INTO table(id, name, type, price) VALUES(1002, 'hook', 'dvd', 999);
 ```
 Following is a result of sqlBulkInsert option(setting true):
-
 ```sql
 INSERT INTO table(id, name, type, price) VALUES(1001, 'egg', 'food', 200)
 ,(header1, header2, header3, header4, header5, header6:str) VALUES(8882, 8882, 8882, '8882', 8882, 8882);
 ```
 
 ### sqlTableName
-In sqlTableName option it allows you to specify the table name when output the sql insert statement.
-It can be used only in SQL.
+In sqlTableName option it allows you to specify the table name when output the sql insert statement.  
+It can be used only in SQL.  
 How to specify the table name
 ```JavaScript
 var tsvert = require('tsvert');
@@ -157,11 +155,10 @@ INSERT INTO products(id, name, type, price) VALUES(1002, 'hook', 'dvd', 999);
 ```
 
 ### rubySymbolKey
-If you want to output an associative array of ruby, the key of the associative array has become a symbol.
-By specifying the rubySymbolKey option to false, it can be a string key.
-
-It can be used only in Ruby.
-By default it is true.
+If you want to output an associative array of ruby, the key of the associative array has become a symbol.  
+By specifying the rubySymbolKey option to false, it can be a string key.  
+It can be used only in Ruby.  
+By default it is true.  
 Following is a result of rubySymbolKey option(setting true):
 ```ruby
 [
@@ -176,9 +173,8 @@ Following is a result of rubySymbolKey option(setting false):
 ]
 ```
 ### useRowNumberKey
-useRowNumberKey option is an option to put a number key to the associative array of each line.
-
-By default it is false.
+useRowNumberKey option is an option to put a number key to the associative array of each line.  
+By default it is false.  
 Following is a result of useRowNumberKey option(setting true):
 ```JavaScript
 [
@@ -211,7 +207,7 @@ Following is a result of header option:
 ```
 
 ### Option correspondence table
-Depending on the type of data format to be converted, different options that you can use.
+Depending on the type of data format to be converted, different options that you can use.  
 The following is option correspondence table.
 
 |       | html |indent|header|useRowNumberKey|sqlBulkInsert|sqlTableName|rubySymbolKey|header|
@@ -225,12 +221,10 @@ The following is option correspondence table.
 
 ## :type
 :type trees line header - which specifies the format of the data by adding to.
-It determines whether enclosed in quotes by the contents of the normal data in tsvert.
-It is not enclosed in quotation marks if a number, do not enclose it in quotes If it is not numeric.
-If the type of the specified, you can control it and whether enclosed in quotes.
-Type can be specified by adding, separated by a colon (:) at the end of the key.
-
-In the following example, name to str, and specifies the num in price.
+It determines whether enclosed in quotes by the contents of the normal data in tsvert.  
+It is not enclosed in quotation marks if a number, do not enclose it in quotes If it is not numeric.  If the type of the specified, you can control it and whether enclosed in quotes.   
+Type can be specified by adding, separated by a colon (:) at the end of the key.   
+In the following example, name to str, and specifies the num in price.  
 ```
 id	name:str	type	price:num
 1001	egg	food	200
@@ -247,11 +241,10 @@ The following results by the above specified I obtained.
 ];
 ```
 
-Line 3 (id: 1003) name in 8214 trough data has been specified, but: It is surrounded by quotation marks in that it has added a str to the key.
-Also, towards the price is a string that null was specified here has become 0.
-Because it is a string it becomes normal "null", but: it has become a result 0, which has been cast as a number by specifying the num.
-
-To specify the type There are the following types.
+Line 3 (id: 1003) name in 8214 trough data has been specified, but: It is surrounded by quotation marks in that it has added a str to the key.  
+Also, towards the price is a string that null was specified here has become 0.  
+Because it is a string it becomes normal "null", but: it has become a result 0, which has been cast as a number by specifying the num.  
+To specify the type There are the following types.  
 
 ### :str (or string)
 str must be enclosed in quotation be any value specified.
@@ -293,7 +286,7 @@ Following is a result:
 ```
 
 ### :type correspondence table
-Of each in the following table: by the specified type, you can Yes whether data is converted copper as summarized in Table.
+Of each in the following table: by the specified type, you can Yes whether data is converted copper as summarized in Table.    
 ※ leftmost column becomes the original data, the data is set in the header row, respectively: how data according to type will have been able to verify and converted.
 ※ The default header line: If you do not specify the type
 
@@ -301,7 +294,7 @@ Of each in the following table: by the specified type, you can Yes whether data 
 |:--- | :---: | :--: | :--: | :----: | :---: |
 |0→   |0      |"0"   |0     |0       |0      |
 |8882→|8882   |"8882"|8882  |8882    |8882   |
-|-8882→|-8882|"-8882"|8882|8882|8882|
+|-8882→|-8882|"-8882"|-8882|-8882|-8882|
 |Lionel Messi→|"Lionel Messi"|"Lionel Messi"|0|Lionel Messi|"Lionel Messi"|
 |→|""|""|0|UNDEFINED|""|
 |TRUE→|"TRUE"|"TRUE"|0|TRUE|TRUE|
@@ -322,24 +315,23 @@ Of each in the following table: by the specified type, you can Yes whether data 
   <script src="tsvert.min.js"></script>
 </head>
 <body>
-  <textarea id="tsv-text" rows="8" cols="100">id	name	type	price
+  <textarea id="tsv-input" rows="8" cols="100">id	name	type	price
   1001	egg	food	200
   1002	hook	dvd	999
   1003	hammer	tool	300
   1004	すし	食べ物	900</textarea>
   <br />
   <input id="test-button" type="button" value="test" onclick=""></input>
+  <br />
+  <textarea id="output" rows="8" cols="100"></textarea>
   <div id="content"></div>
   <script type="text/javascript">
     window.onload = function(){
     	var myButton = document.getElementById( "test-button" );
     	myButton.onclick = function()
     	{
-        var tsv = document.getElementById('tsv-text').value;
-        tsvert.setOptions({
-          "html": true  
-        });
-        document.getElementById('content').innerHTML = tsvert(tsv, "sql");
+        var tsv = document.getElementById('tsv-input').value;
+        document.getElementById('output').innerHTML = tsvert(tsv, "sql");
     	};
     }
   </script>
