@@ -298,7 +298,7 @@ id	name:str	type	price\:num
 |:--- | :---: | :--: | :--: | :----: | :---: |
 |0→   |0      |"0"   |0     |0       |0      |
 |8882→|8882   |"8882"|8882  |8882    |8882   |
-|-8882→|-8882|"-8882"|8882|8882|8882|
+|-8882→|-8882|"-8882"|-8882|-8882|-8882|
 |Lionel Messi→|"Lionel Messi"|"Lionel Messi"|0|Lionel Messi|"Lionel Messi"|
 |→|""|""|0|UNDEFINED|""|
 |TRUE→|"TRUE"|"TRUE"|0|TRUE|TRUE|
@@ -320,24 +320,23 @@ tsvert　をブラウザで使う場合は以下のようにします。
   <script src="tsvert.min.js"></script>
 </head>
 <body>
-  <textarea id="tsv-text" rows="8" cols="100">id	name	type	price
+  <textarea id="tsv-input" rows="8" cols="100">id	name	type	price
   1001	egg	food	200
   1002	hook	dvd	999
   1003	hammer	tool	300
   1004	すし	食べ物	900</textarea>
   <br />
   <input id="test-button" type="button" value="test" onclick=""></input>
+  <br />
+  <textarea id="output" rows="8" cols="100"></textarea>
   <div id="content"></div>
   <script type="text/javascript">
     window.onload = function(){
     	var myButton = document.getElementById( "test-button" );
     	myButton.onclick = function()
     	{
-        var tsv = document.getElementById('tsv-text').value;
-        tsvert.setOptions({
-          "html": true  
-        });        
-        document.getElementById('content').innerHTML = tsvert(tsv, "sql");
+        var tsv = document.getElementById('tsv-input').value;
+        document.getElementById('output').innerHTML = tsvert(tsv, "sql");
     	};
     }
   </script>
