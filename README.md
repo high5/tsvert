@@ -2,6 +2,8 @@
 Tsvert is an Open Source Software Library to convert TSV to various data formats which is JSON and SQL insert statement and popular programming languages(PHP, Python, Ruby) array associative written in JavaScript.
 Tsvert is supposed to work in both Node.js and browser environments.
 
+[![npm version](https://badge.fury.io/js/tsvert.svg)](https://badge.fury.io/js/tsvert)
+
 ## Installation
 ```
 npm install tsvert --save
