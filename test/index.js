@@ -207,6 +207,24 @@ function runTests() {
       console.log("--------------------");
       console.log('\nExpected:\n%s\n', text);
       console.log("--------------------");
+
+      /*
+      fs.writeFileSync("got.txt", result, null, function(err) {
+              if (err) {
+                      console.log(err);
+                      return;
+              }
+              console.log ('Save');
+      });
+
+      fs.writeFileSync("expected.txt", text, null, function(err) {
+              if (err) {
+                      console.log(err);
+                      return;
+              }
+              console.log ('Save');
+      });
+      */
     }
   }
 }
