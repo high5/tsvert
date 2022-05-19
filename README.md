@@ -5,7 +5,7 @@ Tsvert is supposed to work in both Node.js and browser environments.
 [![npm version](https://badge.fury.io/js/tsvert.svg)](https://badge.fury.io/js/tsvert)
 
 ## Demo
-* [Tsvert(web service)](http://tsvert.high5.science/)
+* [Tsvert(web service)](https://tsvert.s3.ap-northeast-1.amazonaws.com/index.html)
 
 ## Installation
 ```
